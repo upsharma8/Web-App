@@ -4,6 +4,7 @@ import os
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as  np
+from PIL import Image
 
 app=Flask("predict")
 
