@@ -15,5 +15,7 @@ RUN mkdir /ws/templates
 ADD templates /ws/templates
 RUN mkdir /ws/Images
 COPY app.py /ws/
+EXPOSE 5000
+CMD python3 /ws/app.py
 
 
