@@ -43,7 +43,7 @@ def upload_predict():
             elif a==1.0:
                 prediction="covid-19 is not Preicted for you"
                 
-    return render_template('covid19.html')	
+    return render_template('covid19.html',prediction=prediction)	
 
 @app.route('/about')
 def aboutus():
