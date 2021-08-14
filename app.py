@@ -12,7 +12,7 @@ UPLOAD_FOLDER='Images'
 
 def predictfunc(image_file):
     path=UPLOAD_FOLDER
-    test_image=image.load_img(path+'/'+image_file.filename,target_size=(224,224))
+    test_image=image.load_img(path+'/'+image_file.filename,target_size=(64,64))
     test_img_arr=image.img_to_array(test_image)
     test_img_arr_4d=np.expand_dims(test_img_arr,axis=0)
     model=load_model("covid19.h5")
