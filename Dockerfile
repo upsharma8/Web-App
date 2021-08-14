@@ -7,10 +7,6 @@ RUN yum install gcc-c++ -y
 
 RUN yum install python3-devel -y
 RUN pip3 install --upgrade pip
-RUN pip3 install tensorflow==2.3.0
-RUN pip3 install tensorflow-estimator==2.3.0
-RUN pip3 install tensorflow-gpu==2.3.0
-RUN pip3 install tensorflow-gpu-estimator==2.3.0
 RUN pip3 install --upgrade tensorflow  
 RUN pip3 install pillow
 COPY ["covid-19.h5","diabetes_model.h5","/ws/"]
