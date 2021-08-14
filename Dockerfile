@@ -16,7 +16,7 @@ ADD templates /ws/templates
 RUN mkdir /ws/Images
 COPY app.py /ws/
 EXPOSE 5000
-EXPORT FLASK_APP=/ws/app.py
+RUN EXPORT FLASK_APP=/ws/app.py
 ENTRYPOINT flask run 
 
 
