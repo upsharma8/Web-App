@@ -6,6 +6,7 @@ RUN pip3 install keras
 RUN yum install gcc-c++ -y
 
 RUN yum install python3-devel -y
+RUN pip3 install --upgrade pip
 RUN pip3 install tensorflow --no-cache-dir 
 RUN pip3 install --upgrade tensorflow  
 RUN pip3 install pillow
