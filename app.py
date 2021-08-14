@@ -15,7 +15,7 @@ def predictfunc(image_file):
     test_image=image.load_img(path+'/'+image_file.filename,target_size=(64,64))
     test_img_arr=image.img_to_array(test_image)
     test_img_arr_4d=np.expand_dims(test_img_arr,axis=0)
-    model=load_model("covid19.h5")
+    model=load_model("covid-19.h5")
     p= model.predict(test_img_arr_4d)
     return p[0][0]
 
