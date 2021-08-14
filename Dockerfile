@@ -10,7 +10,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install tensorflow --no-cache-dir  tensorflow
 RUN pip3 install --upgrade tensorflow  
 RUN pip3 install pillow
-COPY ["covid19.h5","diabetes_model.h5","/ws/"]
+COPY ["covid-19.h5","diabetes_model.h5","/ws/"]
 RUN mkdir /ws/templates
 ADD templates /ws/templates
 RUN mkdir /ws/Images
