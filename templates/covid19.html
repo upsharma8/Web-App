@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<!doctype html>
+    <title>Upload new File</title>
+    <style type="text/css">
+		
+      body{
+        background-image:url('http://www.umw.edu/covidcourse/wp-content/uploads/sites/51/2020/05/COVID-19_header.jpg') ;
+        background-size: cover;
+        background-attachment: fixed;
+        
+      
+      }
+      .covid {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+      </style>
+
+      <body>
+       
+
+    <div class="covid">
+    <h1 style="font-size:400%"><centre>COVID-19 Disease Prediction</centre> </h1>   
+    <br>
+    </div>
+    
+    <h1>Upload new File</h1>
+ 
+    <br>
+    <br>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=image>
+      <input type=submit value=Predict>
+      <br>
+      <h3>Prediction: {{prediction}}</h3>
+    </form>
+
+    </body>
+    </html>
+
+{% endblock content %}
