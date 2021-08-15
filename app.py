@@ -17,7 +17,7 @@ def predictfunc(image_file):
     test_img_arr_4d=np.expand_dims(test_img_arr,axis=0)
     model=load_model("covid-19.h5")
     p= model.predict(test_img_arr_4d)
-    return p[0][0]
+    return round(p[0][0])
 
     
 @app.route('/')
@@ -37,10 +37,10 @@ def upload_predict():
             image_file.save(image_location)
             print(image_file.filename)
             a=predictfunc(image_file)
-            if a==0.0:
+            if a==0:
                 prediction="Covid-19 is Predicted For You"
                 
-            elif a==1.0:
+            elif a==1:
                 prediction="covid-19 is not Preicted for you"
                 
     return render_template('covid19.html',prediction=prediction)	
